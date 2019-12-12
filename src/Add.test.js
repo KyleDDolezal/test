@@ -18,8 +18,16 @@ afterEach(() => {
 
 it('renders sum of two numbers', () => {
     act(() => {
-      render(<Add firstNumber={1} secondNumber={2} />, container);
+      render(<Add numbers={[1, 2]} />, container);
     });
 
     expect(container.textContent).toBe("3");
+})
+
+it('renders the sum of more than two numbers', () => {
+  act(() => {
+    render(<Add numbers={[1, 2, 3]}/>, container);
+  });
+
+  expect(container.textContent).toBe("6")
 })
