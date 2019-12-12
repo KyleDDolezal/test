@@ -6,7 +6,8 @@ import Add from './Add';
 function App() {
   return (
     <div className="App">
-      <Add firstNumber={1} secondNumber={2} />
+      <Add numbers={[1,2]}/>
+      <Add numbers={[1,2,3]}/>
     </div>
   );
 }
